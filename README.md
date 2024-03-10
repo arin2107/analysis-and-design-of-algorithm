@@ -164,19 +164,25 @@ TIME COMPLEXITY :
 The time complexity of generating all permutations of a string is O(n!), where 'n' is the length of the string. The recursive backtracking approach explores all possible arrangements, resulting in a factorial growth in the number of function calls.
 
 ## 6.PRACTICAL : P0WER FUNCTION
+
 **1.brute approach**
+
 ALGORITHM :
 This practical implements a simple recursive algorithm to calculate the power of 'm' raised to the 'n'-th exponent. It uses the recursive property of exponentiation: m^n = m * m^(n-1).
+
 
 TIME COMPLEXITY : 
 The time complexity of this code is exponential, specifically O(2^n), where 'n' is the exponent. This is because, at each step of the recursion, the problem is divided into two subproblems. 
 
 **2.optimal approach**
+
+
 ALGORITHM : 
 The algorithm uses a recursive approach to calculate the power of 'm' raised to the 'n'-th exponent. It takes advantage of the fact that if 'n' is even, the exponentiation can be expressed as the square of the power of 'm' raised to half of 'n'.
 
 TIME COMPLEXITY:
 The time complexity of this code is logarithmic, specifically O(log n), where 'n' is the exponent. The optimization for even exponents significantly reduces the number of recursive calls, making the algorithm more efficient compared to the naive recursive approach. 
+
 
 GRAPH :
 import matplotlib.pyplot as plt
