@@ -843,3 +843,30 @@ TIME COMPLEXITY :
 
 In this implementation, an adjacency matrix is used, and the overall time complexity is O(V^2).
 
+
+## 19.PRACTICAL 19 : CYCLE DETECTION
+
+ALGORITHM:
+
+The algorithm uses the Union-Find algorithm for detecting cycles in an undirected graph. It employs the concept of connected components and checks whether adding an edge forms a cycle by examining the roots of the vertices involved
+
+TIME COMPLEXITY : 
+
+The time complexity of the Union-Find operations (find and unionSets) is generally considered close to O(1) on average.
+The isCyclic method iterates through all edges once, performing Union-Find operations. In the worst case, the time complexity is O(V + E * α(V)), where V is the number of vertices, E is the number of edges, and α is the inverse Ackermann function
+
+
+## 20.PRACTICAL 20: KRUKSAL ALGORITHM
+
+ALGORITHM: 
+
+Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree for a connected, undirected graph.
+It works by sorting the edges in non-decreasing order of weight and adding each edge to the MST as long as it does not form a cycle.
+The Disjoint-Set data structure is used to efficiently check whether adding an edge creates a cycle
+
+TIME COMPLEXITY:
+
+The time complexity of Kruskal's algorithm is dominated by the sorting step, which has a time complexity of O(E log E), where E is the number of edges.
+The Union-Find operations (finding and merging) take nearly constant time on average.
+Overall, the time complexity of the entire algorithm is O(E log E).
+
