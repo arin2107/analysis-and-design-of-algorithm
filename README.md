@@ -662,3 +662,45 @@ TIME COMPLEXITY:
 
 Recursive Approach: The time complexity is O(n) due to the divide-and-conquer strategy, where 'n' is the size of the array.
 Iterative Approach: The time complexity is also O(n) as it traverses the array once.
+
+
+## 13. PRACTICAL 13 : KNAPSACK PROBLEM 
+
+ALGORITHM:
+
+The Knapsack problem is solved using dynamic programming. The knapsack function initializes a 2D array (dp) to store the maximum profit achievable for different weights and items. It then iteratively fills the array, considering each item and its weight in different scenarios.
+The compareByWeight, compareByProfit, and compareByRatio functions are used to sort the items based on weight, profit, and profit-to-weight ratio, respectively.
+
+
+GRAPH:
+import matplotlib.pyplot as plt
+
+# Input sizes and corresponding times in nanoseconds
+input_sizes = [10, 50, 100, 200, 500]
+time_weight = [10750, 68210, 276650, 880390, 5159290]  # Replace these values with your actual data
+time_profit = [6940, 67530, 282020, 782469, 5568139]  # Replace these values with your actual data
+time_ratio = [5760, 65230, 253610, 983030, 5468410]   # Replace these values with your actual data
+
+# Plotting the data
+plt.figure(figsize=(10, 6))
+plt.plot(input_sizes, time_weight, marker='o', label='Time (Weight)')
+plt.plot(input_sizes, time_profit, marker='o', label='Time (Profit)')
+plt.plot(input_sizes, time_ratio, marker='o', label='Time (Ratio)')
+
+# Adding labels and title
+plt.xlabel('Input Size')
+plt.ylabel('Time (ns)')
+plt.title('Knapsack Algorithm Comparison')
+plt.legend()
+
+# Display the plot
+plt.show()
+
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/171aee04-4f39-47c7-b212-355fb907816f)
+
+
+TIME COMPLEXITY:
+
+The time complexity of the Knapsack problem solution is O(n * W), where 'n' is the number of items and 'W' is the capacity of the knapsack.
+Sorting the items takes O(n * log(n)) time.
+For each strategy, the overall time complexity is dominated by the sorting step.
