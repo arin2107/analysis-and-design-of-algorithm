@@ -128,3 +128,38 @@ plt.show()
 
 TIME COMPLEXITY:
 The time complexity of this code is exponential, specifically O(2^n), where 'n' is the number of coin tosses. This is because, at each toss, there are two possibilities (heads or tails), and the recursive function explores all possible combinations
+
+
+## 5.PRACTICAL 5 : STRING PERMUTATION 
+ALGORITHM :
+This PRACRTICAL generates all permutations of a string using recursive backtracking. It swaps characters at different positions in the string to generate all possible arrangements. The base case is when the current position (k) reaches the end of the string (n).
+
+GRAPH:
+from math import radians
+import numpy as np
+import matplotlib.pyplot as plt
+
+values = [
+    (3,772),
+    (5,7323),
+    (7, 321847),
+    (9,24059966),
+    (11, 3517819827 )
+
+]
+
+x_values, y_values = zip(*values)
+
+plt.plot(x_values, y_values, marker='o', linestyle='-', color='b')
+
+plt.xlabel('Input Values')
+plt.ylabel('NanoSeconds')
+plt.title('Inputs Vs Time Graph')
+
+plt.show()
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/13e9befa-65dc-445a-95b1-da5df54926d3)
+
+
+TIME COMPLEXITY :
+The time complexity of generating all permutations of a string is O(n!), where 'n' is the length of the string. The recursive backtracking approach explores all possible arrangements, resulting in a factorial growth in the number of function calls.
+
