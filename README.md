@@ -164,4 +164,68 @@ TIME COMPLEXITY :
 The time complexity of generating all permutations of a string is O(n!), where 'n' is the length of the string. The recursive backtracking approach explores all possible arrangements, resulting in a factorial growth in the number of function calls.
 
 ## 6.PRACTICAL : P0WER FUNCTION
-#
+**1.brute approach**
+ALGORITHM :
+This practical implements a simple recursive algorithm to calculate the power of 'm' raised to the 'n'-th exponent. It uses the recursive property of exponentiation: m^n = m * m^(n-1).
+
+TIME COMPLEXITY : 
+The time complexity of this code is exponential, specifically O(2^n), where 'n' is the exponent. This is because, at each step of the recursion, the problem is divided into two subproblems. 
+
+**2.optimal approach**
+ALGORITHM : 
+The algorithm uses a recursive approach to calculate the power of 'm' raised to the 'n'-th exponent. It takes advantage of the fact that if 'n' is even, the exponentiation can be expressed as the square of the power of 'm' raised to half of 'n'.
+
+TIME COMPLEXITY:
+The time complexity of this code is logarithmic, specifically O(log n), where 'n' is the exponent. The optimization for even exponents significantly reduces the number of recursive calls, making the algorithm more efficient compared to the naive recursive approach. 
+
+GRAPH :
+import matplotlib.pyplot as plt
+
+values = [
+(1000, 3812),
+
+(3000, 16874),
+(4000, 21663),
+(5000, 30111),
+(6000, 35862),
+ (7000, 34181),
+(8000, 38398),
+(9000, 38409),
+(10000, 42505)
+]
+
+
+
+comparison_values = [
+(1000, 1200),
+(2000, 6800),
+(3000, 73000),
+(4000, 73000),
+(5000, 78000),
+(6000, 78000),
+(7000, 85000),
+(8000, 77000),
+(9000, 77000),
+(10000, 78000)
+
+]
+
+x_values, y_values = zip(*values)
+
+x_comparison, y_comparison = zip(*comparison_values)
+
+plt.plot(x_values, y_values, marker='o', linestyle='-', color='b', label='Original Line')
+
+plt.plot(x_comparison, y_comparison, marker='s', linestyle='--', color='r', label='Comparison Line')
+
+plt.xlabel('Input Values')
+plt.ylabel('Seconds')
+
+plt.title('Inputs Vs Time Graph')
+
+plt.legend()
+
+plt.show()
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/15613a0b-cebd-41e3-9ba5-d8bfd94c92ab)
+
+
