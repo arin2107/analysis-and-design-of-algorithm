@@ -163,3 +163,5 @@ plt.show()
 TIME COMPLEXITY :
 The time complexity of generating all permutations of a string is O(n!), where 'n' is the length of the string. The recursive backtracking approach explores all possible arrangements, resulting in a factorial growth in the number of function calls.
 
+## 6.PRACTICAL : P0WER FUNCTION
+#
