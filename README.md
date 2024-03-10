@@ -856,7 +856,7 @@ The time complexity of the Union-Find operations (find and unionSets) is general
 The isCyclic method iterates through all edges once, performing Union-Find operations. In the worst case, the time complexity is O(V + E * α(V)), where V is the number of vertices, E is the number of edges, and α is the inverse Ackermann function
 
 
-## 20.PRACTICAL 20: KRUKSAL ALGORITHM
+## 20.PRACTICAL 20: KRUSKAL ALGORITHM
 
 ALGORITHM: 
 
