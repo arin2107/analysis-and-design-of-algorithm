@@ -517,3 +517,80 @@ plt.show()
 
 TIME COMPLEXITY:
 The time complexity of the merge sort algorithm is O(n log n), where 'n' is the size of the array.
+
+
+## 11.PRACTICAL 11 : QUICK SORT ANALYSIS
+
+**AVERAGE CASE** 
+ALGORITHM :
+
+Quick Sort is a divide-and-conquer sorting algorithm.
+It selects a pivot element from the array and partitions the other elements into two subarrays, according to whether they are less than or greater than the pivot.
+The process is repeated recursively on the subarrays.
+
+TIME COMPLEXITY:
+The time complexity of the average case for Quick Sort is O(n log n), where 'n' is the size of the array.
+
+**WORST CASE**
+ALGORITHM:
+
+Quick Sort is a divide-and-conquer sorting algorithm.
+It selects a pivot element from the array and partitions the other elements into two subarrays, according to whether they are less than or greater than the pivot.
+The process is repeated recursively on the subarrays.
+
+
+TIME COMPLEXITY:
+The worst-case time complexity of Quick Sort is O(n^2) when the input array is already sorted, and the pivot is consistently chosen as the smallest or largest element.
+
+GRAPH:
+import matplotlib.pyplot as plt
+
+values = [
+(500 , 0),
+(1000 , 816100),
+(1500 , 754800),
+(2000 , 1180600),
+(2500 , 1770300),
+(3000 , 2074000),
+(3500 , 3542700),
+(4000 , 4711700),
+(4500 , 5433500),
+(5000 , 10442500)
+]
+
+
+
+comparison_values = [
+(500 , 0),
+(1000 , 342500),
+(1500 , 505100),
+(2000 , 1162300),
+(2500 , 1955800),
+(3000 , 3162800),
+(3500 , 3745800),
+(4000 , 4803900),
+(4500 , 5266100),
+(5000 , 6497600)
+
+]
+
+x_values, y_values = zip(*values)
+
+x_comparison, y_comparison = zip(*comparison_values)
+
+plt.plot(x_values, y_values, marker='o', linestyle='-', color='b', label='Original Line')
+
+plt.plot(x_comparison, y_comparison, marker='s', linestyle='--', color='r', label='Comparison Line')
+
+plt.xlabel('Input Values')
+plt.ylabel('Seconds')
+
+plt.title('Inputs Vs Time Graph')
+
+plt.legend()
+
+plt.show()
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/05ca6eb0-f889-4c0e-b790-e8abfa457ad7)
+
+
+
