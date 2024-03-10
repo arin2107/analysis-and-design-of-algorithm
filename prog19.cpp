@@ -1,74 +1,72 @@
+
+//cycle detection
 #include <iostream>
 #include <vector>
-#include <ctime>
-#include <cstdlib>
 
 using namespace std;
 
-// Function to heapify a subtree rooted with node i which is an index in arr[]
-void heapify(vector<int>& arr, int n, int i) {
-    int largest = i; // Initialize largest as root
-    int l = 2 * i + 1; // left = 2*i + 1
-    int r = 2 * i + 2; // right = 2*i + 2
+class Graph {
+public:
+    int vertices;
+    vector<int> parent;
 
-    // If left child is larger than root
-    if (l < n && arr[l] > arr[largest])
-        largest = l;
-
-    // If right child is larger than largest so far
-    if (r < n && arr[r] > arr[largest])
-        largest = r;
-
-    // If largest is not root
-    if (largest != i) {
-        swap(arr[i], arr[largest]);
-
-        // Recursively heapify the affected sub-tree
-        heapify(arr, n, largest);
+    Graph(int V) : vertices(V), parent(V) {
+        for (int i = 0; i < V; ++i) {
+            parent[i] = i;
+        }
     }
-}
 
-// Main function to do heap sort
-void heapSort(vector<int>& arr, int n) {
-    // Build heap (rearrange array)
-    for (int i = n / 2 - 1; i >= 0; i--)
-        heapify(arr, n, i);
-
-    // One by one extract an element from heap
-    for (int i = n - 1; i > 0; i--) {
-        // Move current root to end
-        swap(arr[0], arr[i]);
-
-        // call max heapify on the reduced heap
-        heapify(arr, i, 0);
+    int find(int v) {
+        if (parent[v] == v)
+            return v;
+        return find(parent[v]);
     }
-}
+
+    void unionSets(int x, int y) {
+        int rootX = find(x);
+        int rootY = find(y);
+        parent[rootX] = rootY;
+    }
+
+    bool isCyclic() {
+        for (int u = 0; u < vertices; ++u) {
+            for (int v : adjacencyList[u]) {
+                int rootU = find(u);
+                int rootV = find(v);
+
+                if (rootU == rootV)
+                    return true;
+
+                unionSets(rootU, rootV);
+            }
+        }
+
+        return false;
+    }
+
+    void addEdge(int u, int v) {
+        adjacencyList[u].push_back(v);
+        adjacencyList[v].push_back(u);
+    }
+
+private:
+    vector<vector<int>> adjacencyList;
+};
 
 int main() {
-    // Seed the random number generator
-    srand(time(0));
+    // Create a graph
+    Graph g(5);
+    g.addEdge(0, 1);
+    g.addEdge(1, 2);
+    g.addEdge(2, 0);
+    g.addEdge(1, 3);
+    g.addEdge(3, 4);
 
-    // Varying input sizes from 100,000 to 500,000
-    for (int size = 100000; size <= 500000; size += 100000) {
-        // Generate random input
-        vector<int> arr(size);
-        for (int i = 0; i < size; ++i)
-            arr[i] = rand();
-
-        // Record the start time
-        clock_t start = clock();
-
-        // Perform heap sort
-        heapSort(arr, size);
-
-        // Record the end time
-        clock_t end = clock();
-
-        // Calculate the time taken
-        double time_taken = double(end - start) / CLOCKS_PER_SEC;
-
-        // Output the time taken
-        cout << "Time taken for sorting " << size << " elements: " << time_taken << " seconds\n";
+    // Check for cycles
+    if (g.isCyclic()) {
+        cout << "Graph contains a cycle.\n";
+    } else {
+        cout << "Graph does not contain a cycle.\n";
     }
 
     return 0;
