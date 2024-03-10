@@ -97,3 +97,34 @@ plt.show()
 ![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/d4c72d88-419a-4b59-aae5-be6fea176673)
 
 TIME COMPLEXITY : The time complexity of the Tower of Hanoi algorithm is O(2^n), where 'n' is the number of disks. This is an exponential time complexity because, at each step, the problem is divided into two recursive subproblems.
+
+## 4.PRACTICAL 4 : COIN PERMUTATION 
+
+ALGORITHM : 
+This function recursively generates all combinations of heads (1) and tails (0) for a given number of coin tosses. It starts with an array arr initialized to all zeros, and at each recursion level, it sets the current toss to heads (1) and recursively calls itself for the next toss. Then, it sets the current toss to tails (0) and recursively calls itself again. 
+GRAPH: 
+import matplotlib.pyplot as plt
+
+values = [
+    (10,0),
+    (13, 0),
+    (16, 1076300),
+    (19,4862400),
+    (22, 40249500)
+
+]
+
+x_values, y_values = zip(*values)
+
+plt.plot(x_values, y_values, marker='o', linestyle='-', color='b')
+
+plt.xlabel('Input Values')
+plt.ylabel('NanoSeconds')
+plt.title('Inputs Vs Time Graph')
+
+plt.show()
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/b629443f-9640-4d4d-8019-8579d950ffb4)
+
+
+TIME COMPLEXITY:
+The time complexity of this code is exponential, specifically O(2^n), where 'n' is the number of coin tosses. This is because, at each toss, there are two possibilities (heads or tails), and the recursive function explores all possible combinations
