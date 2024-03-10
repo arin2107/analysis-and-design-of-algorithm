@@ -830,10 +830,16 @@ In this implementation, a priority queue is used, and the overall time complexit
 
 ## 18.PRACTICAL 18 : DIJAKSTRA ALGORITHM 
 
-ALGORITHM 
+ALGORITHM :
+
+Dijkstra's algorithm is a greedy algorithm used for finding the single-source shortest paths in a weighted graph with non-negative weights.
+It starts with an empty set of vertices and repeatedly selects the vertex with the minimum distance from the source, adding it to the set.
+The algorithm then updates the distance values of the neighboring vertices based on the newly added vertex.
+This process continues until all vertices are included in the set, and the algorithm finds the shortest paths from the source to all other vertices.
 
 
 
-TIME COMPLEXITY
+TIME COMPLEXITY :
 
+In this implementation, an adjacency matrix is used, and the overall time complexity is O(V^2).
 
