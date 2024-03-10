@@ -813,3 +813,20 @@ Average Time Complexity: O(n log n)
 Worst-Case Time Complexity: O(n^2) (uncommon with good pivot selection strategies)
 The iterative version maintains the average time complexity of O(n log n) but avoids the function call overhead of recursion.
 
+
+## 17.PRACTICAL 17 : PRIM'S ALGORITHM
+
+ALGORITHM:
+
+Prim's algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) of a connected, undirected graph.
+It starts with an arbitrary node and grows the MST one vertex at a time by adding the shortest edge that connects a vertex in the MST to a vertex outside the MST.
+The process continues until all vertices are included in the MST
+
+
+TIME COMPLEXITY:
+
+In this implementation, a priority queue is used, and the overall time complexity is O((V + E) log V).
+
+
+## 18.PRACTICAL 18 : 
+
