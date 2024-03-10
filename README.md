@@ -440,3 +440,44 @@ plt.show()
 TIME COMPLEXITY:
 
 The time complexity of the merge sort algorithm is O(n log n), where 'n' is the size of the array.
+
+
+## 9. GENERATE MAGIC SQAURE 
+
+ALGORITHM :
+
+The Siamese method is a constructive algorithm for creating odd-order magic squares.
+The main idea is to start from the central cell of the first row and fill the square by moving diagonally up and to the right.
+If a move takes the position out of the matrix bounds, it wraps around to the opposite side.
+If the cell is already occupied, move vertically down one position instead.
+
+
+GRAPH:
+
+import matplotlib.pyplot as plt
+
+values = [
+(3,00 ),
+(5,00 ),
+(7,00 ),
+(9,10 ),
+(11,20 ),
+(13,20 ),
+(15,30 ),
+      
+]
+
+x_values, y_values = zip(*values)
+
+plt.plot(x_values, y_values, marker='o', linestyle='-', color='b')
+
+plt.xlabel('Input Values')
+plt.ylabel('NanoSeconds')
+plt.title('Inputs Vs Time Graph')
+
+plt.show()
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/e8986be6-e2dc-4e25-90be-3ec91fea579b)
+
+
+TIME COMPLEXITY:
+The time complexity of generating a magic square using the Siamese method is O(n^2), where 'n' is the order of the square.
