@@ -743,6 +743,11 @@ Overall time complexity: O(n log n).
 
 ALGORITHM :
 
+Binary search is an efficient algorithm for finding an element in a sorted array.
+It repeatedly divides the search interval in half, comparing the target element to the middle element of the interval.
+If the target element is equal to the middle element, the search is successful.
+If the target is less than the middle element, the search continues in the lower half; otherwise, it continues in the upper half.
+The process repeats until the target is found or the interval is empty.
 
 
 GRAPH:
@@ -772,7 +777,9 @@ plt.show()
 TIME COMPLEXITY:
 
 
-
+Best Case: O(1) - Occurs when the target is found in the middle in the first comparison.
+Worst Case: O(log n) - Occurs when the target is not present, and the search space is halved at each step.
+Average Case: O(log n) - Same as the worst case.
 
 ## 16. PRACTICAL 16 : ITERATIVE QUICK SORT
 
