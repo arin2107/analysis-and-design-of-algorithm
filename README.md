@@ -522,6 +522,8 @@ The time complexity of the merge sort algorithm is O(n log n), where 'n' is the 
 ## 11.PRACTICAL 11 : QUICK SORT ANALYSIS
 
 **AVERAGE CASE** 
+
+
 ALGORITHM :
 
 Quick Sort is a divide-and-conquer sorting algorithm.
@@ -531,8 +533,9 @@ The process is repeated recursively on the subarrays.
 TIME COMPLEXITY:
 The time complexity of the average case for Quick Sort is O(n log n), where 'n' is the size of the array.
 
-**WORST CASE**
-ALGORITHM:
+**WORST CASE**    
+ 
+ ALGORITHM:
 
 Quick Sort is a divide-and-conquer sorting algorithm.
 It selects a pivot element from the array and partitions the other elements into two subarrays, according to whether they are less than or greater than the pivot.
