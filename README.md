@@ -778,8 +778,12 @@ TIME COMPLEXITY:
 
 ALGORITHM:
 
+The QuickSort algorithm sorts an array by selecting a pivot element, partitioning the other elements into two subarrays, and then recursively sorting the subarrays.
+The iterative version uses a stack to manage the partitioning process without using recursion.
+
 
 GRAPH:
+
 import matplotlib.pyplot as plt
 (input size vs execution time in seconds)
 input_sizes = [1000, 5000, 10000, 50000, 100000]
@@ -798,3 +802,7 @@ plt.show()
 
 
 TIME COMPLEXITY:
+Average Time Complexity: O(n log n)
+Worst-Case Time Complexity: O(n^2) (uncommon with good pivot selection strategies)
+The iterative version maintains the average time complexity of O(n log n) but avoids the function call overhead of recursion.
+
