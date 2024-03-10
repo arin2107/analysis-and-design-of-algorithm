@@ -702,3 +702,64 @@ TIME COMPLEXITY:
 The time complexity of the Knapsack problem solution is O(n * W), where 'n' is the number of items and 'W' is the capacity of the knapsack.
 Sorting the items takes O(n * log(n)) time.
 For each strategy, the overall time complexity is dominated by the sorting step.
+
+
+## 14. PRACTICAL 14 : ACTIVITY SELECTION PROBLEM 
+
+ALGORITHM :
+
+The greedy algorithm selects activities based on their finish time.
+It sorts the activities in ascending order of finish time.
+It iterates through the sorted activities, selecting the first non-overlapping activity at each step.
+
+GRAPH:
+
+import matplotlib.pyplot as plt
+
+(input size vs execution time in seconds)
+input_sizes = [10, 20, 30, 40, 50]
+execution_times = [2.1e-05, 1.7e-05, 2.4e-05, 2.6e-05, 4.6e-05] \
+
+execution_times_ns = [time * 1e9 for time in execution_times]
+
+plt.plot(input_sizes, execution_times_ns, marker='o', linestyle='-', color='b')
+plt.title('Input Size vs Execution Time')
+plt.xlabel('Input Size')
+plt.ylabel('Execution Time (nanoseconds)')
+plt.grid(True)
+plt.show()
+
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/6b305ea2-fbe9-4520-b60c-439bc24e70f8)
+
+
+
+TIME COMPLEXITY:
+
+Sorting the activities: O(n log n), where 'n' is the number of activities.
+Iterating through the sorted activities: O(n).
+Overall time complexity: O(n log n).
+
+## 15. PRACTICAL 15 : BINARY SEARCH ANALYSIS
+
+ALGORITHM :
+
+
+
+GRAPH:
+
+
+TIME COMPLEXITY:
+
+
+
+
+## 16. PRACTICAL 16 : ITERATIVE QUICK SORT
+
+ALGORITHM:
+
+
+GRAPH:
+
+
+
+TIME COMPLEXITY:
