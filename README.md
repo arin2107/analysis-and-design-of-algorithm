@@ -66,3 +66,34 @@ plt.show()
 ![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/86d69680-a869-4d6e-a40f-b7daf49ed5d6)
 
 TIME COMPLEXITY: The time complexity of the summing operation is O(n), where 'n' is the number of elements in the array. The loop in the sum_numbers function iterates through each element once, resulting in linear time complexity
+
+## 3.PRACTICAL 3 : TOWER OF HANOI
+
+ALGORITHM: The Tower of Hanoi algorithm is a classical recursive problem. It follows the principles of divide and conquer. The idea is to move 'n' disks from the source peg to the target peg using an auxiliary peg. 
+
+GRAPH: 
+import matplotlib.pyplot as plt
+
+values = [
+    (18,6221318),
+(19,2812452),
+(20,10571623),
+(21,27133626),
+(22,49885788),
+(23,110367291),
+(24,232394370)
+
+]
+
+x_values, y_values = zip(*values)
+
+plt.plot(x_values, y_values, marker='o', linestyle='-', color='b')
+
+plt.xlabel('Input Values')
+plt.ylabel('NanoSeconds')
+plt.title('Inputs Vs Time Graph')
+
+plt.show()
+![image](https://github.com/arin2107/analysis-and-design-of-algorithm/assets/121510816/d4c72d88-419a-4b59-aae5-be6fea176673)
+
+TIME COMPLEXITY : The time complexity of the Tower of Hanoi algorithm is O(2^n), where 'n' is the number of disks. This is an exponential time complexity because, at each step, the problem is divided into two recursive subproblems.
