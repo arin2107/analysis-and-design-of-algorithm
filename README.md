@@ -885,6 +885,15 @@ In the inner loop, the algorithm calculates the cost of reaching a node i throug
 
 Overall, the time complexity of the algorithm is dominated by the nested loops, which result in a cubic time complexity.
 
+## 22.PRACTICAL 22: Assembly line program
+## 23.PRACTICAL 23: All Pairs Shortest Path
+## 24.PRACTICAL 24: 0/1 Knapsack
+## 25.PRACTICAL 25: M-Coloring graph Problem
+## 26.PRACTICAL 26: N-Queen problem
+## 27.PRACTICAL 27: Sum Of Subsets problem
+## 28.PRACTICAL 28: Matrix Chain Multiplication
+## 29.PRACTICAL 29: Longest Common Subsequence
+
 
 
 
