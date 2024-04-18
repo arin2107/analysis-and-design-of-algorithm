@@ -870,3 +870,21 @@ The time complexity of Kruskal's algorithm is dominated by the sorting step, whi
 The Union-Find operations (finding and merging) take nearly constant time on average.
 Overall, the time complexity of the entire algorithm is O(E log E).
 
+## 21.PRACTICAL 21: Find f cost and path 
+Algorithm:
+
+The code implements a dynamic programming algorithm to find the shortest paths with k intermediate nodes from a source node to a destination node in a weighted graph. The algorithm works by iteratively building up a table fcost, where fcost[j] stores the minimum cost of reaching node j from the source node using at most j intermediate nodes. The algorithm also uses a table d to store the predecessor node in the shortest path for each node.
+
+Here are the steps of the algorithm:
+
+Time Complexity:
+
+The time complexity of the algorithm is O(n^3 * k), where n is the number of nodes in the graph and k is the number of intermediate nodes allowed in the path. This is because the nested loops iterate over all possible nodes j (n times), neighbors i of each node j (up to n times in the worst case), and intermediate nodes j (k times).
+
+In the inner loop, the algorithm calculates the cost of reaching a node i through a node j. This calculation involves looking up the weights of the edges between j and its neighbors, which can be done in constant time if the graph is stored in an adjacency matrix.
+
+Overall, the time complexity of the algorithm is dominated by the nested loops, which result in a cubic time complexity.
+
+
+
+
